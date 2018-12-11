@@ -20,7 +20,7 @@ export class sequelizeRepo {
       password: 'iotiscool',
       url: 'localhost',
       port: 3306,
-      modelPaths: ['../model']
+      modelPaths: [__dirname + '/../model/*.ts']
     })
     this.repository.addModels([BMP280, DHT11, DS18B20, Openweather])
   }
