@@ -1,8 +1,8 @@
 import { Sequelize } from "sequelize-typescript";
-import { BMP280 } from "../model/BMP280";
-import { DHT11 } from "../model/DHT11";
-import { DS18B20 } from "../model/DS18B20";
-import { Openweather } from "../model/Openweather";
+import { BMP280 } from "./model/BMP280";
+import { DHT11 } from "./model/DHT11";
+import { DS18B20 } from "./model/DS18B20";
+import { Openweather } from "./model/Openweather";
 
 export class sequelizeRepo {
   repository: Sequelize;
@@ -20,7 +20,7 @@ export class sequelizeRepo {
       password: 'iotiscool',
       url: 'localhost',
       port: 3306,
-      modelPaths: [__dirname + '/../model/*.ts']
+      modelPaths: [__dirname + '/model/*.ts']
     })
     this.repository.addModels([BMP280, DHT11, DS18B20, Openweather])
   }
