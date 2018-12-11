@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "pretty": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

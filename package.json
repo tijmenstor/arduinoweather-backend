@@ -1,0 +1,37 @@
+{
+  "name": "arduino_backend",
+  "version": "1.0.0",
+  "description": "Backend for the ArduinoWeather project",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "node dist/index.js",
+    "prod": "tsc && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tijmen34/ArduinoWeather.git"
+  },
+  "author": "Tijmen Stor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tijmen34/ArduinoWeather/issues"
+  },
+  "homepage": "https://github.com/tijmen34/ArduinoWeather#readme",
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.0",
+    "@types/node": "^10.12.12",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "node": "^11.4.0",
+    "reflect-metadata": "^0.1.12",
+    "sequelize": "^4.41.2",
+    "sequelize-typescript": "^0.6.6"
+  }
+}
