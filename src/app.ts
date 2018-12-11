@@ -10,7 +10,6 @@ class App {
   constructor() {
     this.app = express();
     this.config();
-    this.dbConnection();
   }
 
   private config(): void {
@@ -18,9 +17,6 @@ class App {
     this.app.use(bodyParser.urlencoded({ extended: false }));
     this.app.use("/", weatherRoutes);
     this.app.use(cors());
-  }
-
-  private dbConnection(){
     new sequelizeRepo();
   }
 }
