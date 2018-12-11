@@ -17,6 +17,6 @@ export class BMP280 extends Model<BMP280> {
   altitude: number;
 
   @Column(DataType.DATE)
-  timestamp: Date;
+  date: Date;
 
 }

@@ -17,6 +17,6 @@ export class Openweather extends Model<Openweather> {
   humidity: number;
 
   @Column(DataType.DATE)
-  timestamp: Date;
+  date: Date;
 
 }

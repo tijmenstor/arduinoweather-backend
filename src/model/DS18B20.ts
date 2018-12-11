@@ -11,6 +11,6 @@ export class DS18B20 extends Model<DS18B20> {
   temperature: number;
 
   @Column(DataType.DATE)
-  timestamp: Date;
+  date: Date;
 
 }

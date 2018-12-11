@@ -14,6 +14,6 @@ export class DHT11 extends Model<DHT11> {
   humidity: number;
 
   @Column(DataType.DATE)
-  timestamp: Date;
+  date: Date;
 
 }
