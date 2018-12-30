@@ -22,6 +22,7 @@ export function getCurrentWeatherController(req: Request, res: Response) {
       })
     })
     .catch(err => {
+      console.log(Date.now() + "[GetCurrentWeatherController] - Failed while retrieving weatherdates: ", err);
       res.status(500).send({
         Error: err
       })
