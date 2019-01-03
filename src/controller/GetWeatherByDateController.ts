@@ -5,6 +5,10 @@ import { DS18B20 } from "../model/DS18B20";
 import { Openweather } from "../model/Openweather";
 
 export function getWeatherByDateController(req: Request, res: Response) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+
   const startDate = req.params.startDate;
   const endDate = req.params.endDate;
 

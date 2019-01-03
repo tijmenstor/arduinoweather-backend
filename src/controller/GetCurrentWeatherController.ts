@@ -5,6 +5,10 @@ import { DS18B20 } from "../model/DS18B20";
 import { Openweather } from "../model/Openweather";
 
 export function getCurrentWeatherController(req: Request, res: Response) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+
   const bmp280Promise = BMP280.findAll({ limit: 1, order: [['id', 'DESC']] });
   const dht11Promise = DHT11.findAll({ limit: 1, order: [['id', 'DESC']] });
   const ds18b20Promise = DS18B20.findAll({ limit: 1, order: [['id', 'DESC']] });
