@@ -16,7 +16,7 @@ class App {
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: false }));
     this.app.use("/", weatherRoutes);
-    this.app.use(cors());
+    this.app.use(cors({credentials: true, origin: true}));
     new sequelizeRepo();
   }
 }
