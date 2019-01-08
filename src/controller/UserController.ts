@@ -3,7 +3,7 @@ import { User } from "../model/User";
 
 export function loginUser(req: Request, res: Response) {
   res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'POST');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 
   const requestUsername = req.body.username;
@@ -47,7 +47,7 @@ export function loginUser(req: Request, res: Response) {
 
 export function signupUser(req: Request, res: Response) {
   res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'POST');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 
   const requestUsername = req.body.username;
