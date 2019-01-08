@@ -7,8 +7,8 @@ export class User extends Model<User> {
   @Column
   id: number;
 
-  @Column
   @Unique
+  @Column
   username: string;
 
   @Column

@@ -20,10 +20,10 @@ class Routes {
     this.router.get("/api/weather/:startDate/:endDate", (req: express.Request, res: express.Response) => {
       getWeatherByDate(req,res);
     });
-    this.router.get("/api/user/login", (req: express.Request, res: express.Response) => {
+    this.router.post("/api/user/login", (req: express.Request, res: express.Response) => {
       loginUser(req,res);
     });
-    this.router.get("/api/user/signup", (req: express.Request, res: express.Response) => {
+    this.router.post("/api/user/signup", (req: express.Request, res: express.Response) => {
       signupUser(req,res);
     });
   }
