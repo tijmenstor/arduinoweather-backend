@@ -3,6 +3,7 @@ import { BMP280 } from "./model/BMP280";
 import { DHT11 } from "./model/DHT11";
 import { DS18B20 } from "./model/DS18B20";
 import { Openweather } from "./model/Openweather";
+import { User } from "./model/User";
 
 export class sequelizeRepo {
   repository: Sequelize;
@@ -21,7 +22,7 @@ export class sequelizeRepo {
       logging: false,
       modelPaths: [__dirname + '/model/*.ts']
     })
-    this.repository.addModels([BMP280, DHT11, DS18B20, Openweather])
+    this.repository.addModels([BMP280, DHT11, DS18B20, Openweather, User])
   }
 
   private checkConnection() {
