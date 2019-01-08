@@ -1,7 +1,6 @@
 import * as express from "express";
-import {getCurrentWeatherController} from "../controller/GetCurrentWeatherController";
-import {getAllWeatherController} from "../controller/GetAllWeatherController";
-import {getWeatherByDateController} from "../controller/GetWeatherByDateController";
+import { getCurrentWeather, getWeatherByDate, getAllWeather } from "../controller/WeatherController"
+import { loginUser, signupUser } from "../controller/UserController";
 
 
 class Routes {
@@ -13,14 +12,20 @@ class Routes {
 
   private config(): void {
     this.router.get("/api/weather/now", (req: express.Request, res: express.Response) => {
-      getCurrentWeatherController(req,res);
+      getCurrentWeather(req,res);
     });
     this.router.get("/api/weather/all", (req: express.Request, res: express.Response) => {
-      getAllWeatherController(req,res);
+      getAllWeather(req,res);
     });
     this.router.get("/api/weather/:startDate/:endDate", (req: express.Request, res: express.Response) => {
-      getWeatherByDateController(req,res);
-    })
+      getWeatherByDate(req,res);
+    });
+    this.router.get("/api/user/login", (req: express.Request, res: express.Response) => {
+      loginUser(req,res);
+    });
+    this.router.get("/api/user/signup", (req: express.Request, res: express.Response) => {
+      signupUser(req,res);
+    });
   }
 }
 
