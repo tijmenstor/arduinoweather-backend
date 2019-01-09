@@ -65,6 +65,8 @@ export function signupUser(req: Request, res: Response) {
             status: false
           })
         } else {
+          const newUser = User.build({username: requestUsername, password: requestPassword})
+          newUser.save();
           res.status(200).send({
             message: "User created.",
             status: true
