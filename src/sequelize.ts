@@ -4,6 +4,7 @@ import { DHT11 } from "./model/DHT11";
 import { DS18B20 } from "./model/DS18B20";
 import { Openweather } from "./model/Openweather";
 import { User } from "./model/User";
+import * as dotenv from "dotenv";
 
 export class sequelizeRepo {
   repository: Sequelize;
@@ -14,11 +15,14 @@ export class sequelizeRepo {
   }
 
   private config() {
+    dotenv.config();
+
     this.repository = new Sequelize({
-      database: 'internetofthings',
+      host: process.env.DB_HOST,
+      database: process.env.DB_NAME || 'internetofthings',
       dialect: 'mysql',
-      username: 'iot',
-      password: 'iotiscool',
+      username: process.env.DB_USERNAME || 'mysql',
+      password: process.env.DB_PASSWORD || 'wild_mysql_password',
       logging: false,
       modelPaths: [__dirname + '/model/*.ts']
     })
