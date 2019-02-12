@@ -82,3 +82,26 @@ export function getWeatherByDate(req: Request, res: Response) {
       })
     })
 }
+
+export function saveWeather(req: Request, res: Response) {
+  const newBMP280Record: BMP280 = BMP280.build(req.body.BMP280)
+  const newDHT11Record: DHT11 = DHT11.build(req.body.DHT11)
+  const newDS18B20Record: DS18B20 = DS18B20.build(req.body.DS18B20)
+  const newOpenweatherRecord: Openweather = Openweather.build(req.body.Openweather)
+
+  const bmp280Promise = newBMP280Record.save();
+  const dht11Promise = newDHT11Record.save();
+  const ds18b20Promise = newDS18B20Record.save();
+  const openweatherPromise = newOpenweatherRecord.save();
+
+  const promisesArray = [bmp280Promise, dht11Promise, ds18b20Promise, openweatherPromise];
+
+  Promise.all(promisesArray)
+    .then(_ => res.status(200).send({ Status: "Succesfully inserted data." }))
+    .catch(err => {
+      console.log(Date.now() + "[saveWeather] - Failed while saving weatherdates: ", err);
+      res.status(500).send({
+        Error: err
+      })
+    })
+}

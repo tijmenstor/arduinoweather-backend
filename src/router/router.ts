@@ -1,5 +1,5 @@
 import * as express from "express";
-import { getCurrentWeather, getWeatherByDate, getAllWeather } from "../controller/WeatherController"
+import { getCurrentWeather, getWeatherByDate, getAllWeather, saveWeather } from "../controller/WeatherController"
 import { loginUser, signupUser } from "../controller/UserController";
 
 
@@ -26,6 +26,9 @@ class Routes {
     this.router.post("/api/user/signup", (req: express.Request, res: express.Response) => {
       signupUser(req,res);
     });
+    this.router.post("/api/weather/save", (req: express.Request, res: express.Response) => {
+      saveWeather(req, res);
+    })
   }
 }
 
