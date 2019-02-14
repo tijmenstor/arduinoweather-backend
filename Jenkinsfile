@@ -7,12 +7,12 @@ node('swarm-build-agent') {
 
     stage('Build') {
         withCredentials([usernamePassword(usernameVariable: 'DB_USERNAME', passwordVariable: 'DB_PASSWORD', credentialsId: 'arduino-backend-creds')]) {
-            set +x
+            sh 'set +x'
             sh "export DB_USERNAME=$DB_USERNAME"
             sh "export DB_PASSWORD=$DB_PASSWORD"
             sh "export DB_HOST=tijmenstortest.nl"
         }
-        set -x
+        sh 'set -x'
         app = docker.build("tijmen34/arduinoweather-backend")
     }
     stage('Push Image') {
