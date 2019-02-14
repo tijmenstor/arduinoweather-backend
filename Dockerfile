@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 COPY package.json ./
 
-RUN npm install & npm install typescript -g
+RUN npm install && npm install typescript -g
 
 COPY . .
 
