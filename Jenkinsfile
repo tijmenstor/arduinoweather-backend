@@ -22,6 +22,6 @@ node('swarm-build-agent') {
         }
     }
     stage('Deploy') {
-         sh "docker service update --image arduino-backend:${env.BUILD_NUMBER}"
+         sh "docker service update --image tijmen34/arduino-backend:${env.BUILD_NUMBER} arduino-backend"
     }
 }
