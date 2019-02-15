@@ -9,6 +9,7 @@ The API has the following endpoints:
   * Get current weather: ```GET /api/weather/now```
   * Get all weather: ```GET /api/weather/all```
   * Get weather by date: ```GET /api/weather/:startDate/:endDate```
+  * Post current weather: ```POST /api/weather/save``` 
 * User
   * User log in: ```POST /api/user/login```
   * User sign up: ```POST /api/user/signup```
