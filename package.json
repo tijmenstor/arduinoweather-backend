@@ -19,21 +19,21 @@
   },
   "homepage": "https://github.com/tijmen34/ArduinoWeather#readme",
   "devDependencies": {
-    "@types/body-parser": "^1.17.0",
-    "@types/cors": "^2.8.4",
-    "@types/express": "^4.16.0",
-    "@types/node": "^10.12.12",
-    "typescript": "^3.1.6"
+    "@types/body-parser": "^1.19.0",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.2",
+    "@types/node": "^10.17.16",
+    "typescript": "^3.8.2"
   },
   "dependencies": {
-    "@types/dotenv": "^6.1.0",
-    "body-parser": "^1.18.3",
+    "@types/dotenv": "^6.1.1",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "mysql2": "^1.6.4",
-    "reflect-metadata": "^0.1.12",
-    "sequelize": "^4.41.2",
-    "sequelize-typescript": "^0.6.6"
+    "express": "^4.17.1",
+    "mysql2": "^1.7.0",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^4.44.3",
+    "sequelize-typescript": "^0.6.11"
   }
 }
