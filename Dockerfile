@@ -2,7 +2,7 @@ FROM node:8-slim
 
 WORKDIR /usr/src/app
 
-COPY package.json ./
+COPY package.json package-lock.json ./
 
 RUN npm install && npm install typescript -g
 
