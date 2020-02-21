@@ -57,7 +57,7 @@ export function getAllWeather(req: Request, res: Response) {
 export function getWeatherByDate(req: Request, res: Response) {
   const startDate = req.params.startDate;
   const endDate = req.params.endDate;
-  const Op = require('./models').Sequelize.Op;
+  const Op = require('sequelize').Sequelize.Op;
 
   const bmp280Promise = BMP280.findAll({ where: { date: { [Op.between]: [startDate, endDate] } } });
   const dht11Promise = DHT11.findAll({ where: { date: { [Op.between]: [startDate, endDate] } } });
