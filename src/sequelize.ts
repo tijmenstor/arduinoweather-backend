@@ -25,7 +25,7 @@ export class sequelizeRepo {
       password: process.env.DB_PASSWORD || 'wild_mysql_password',
       logging: false,
       modelPaths: [__dirname + '/model/*.ts']
-    })
+    });
     this.repository.addModels([BMP280, DHT11, DS18B20, Openweather, User])
   }
 
